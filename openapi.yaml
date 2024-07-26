@@ -1,0 +1,46 @@
+openapi: 3.0.1
+info:
+    title: Reverse_Output
+    description: Take an input of Chinese characters and English letters, then output every letter or character in reverse.
+    version: "v1"
+servers:
+    - url: http://127.0.0.1:8081
+paths:
+    /reverse_sentence:
+        post:
+            operationID: reverseSentence
+            summary: Reverses a given sentence or word
+            requestBody:
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/reverseSentenceRequest"
+            responses:
+                "200":
+                    description: Sentence reversed successfully
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/reverseSentenceResponse"
+
+components:
+    schemas:
+        reverseSentenceRequest:
+            type: object
+            required: [sentence]
+            properties:
+                sentence:
+                    type: string
+                    description: The sentence to be reversed
+                    example: "asdfghjkl"
+        
+        reverseSentenceResponse:
+            type: object
+            required: [reversed_sentence]
+            properties:
+                reversed_sentence:
+                    type: string
+                    description: The reversed version of the input sentence
+                    example: "lkjhgfdsa"
+        

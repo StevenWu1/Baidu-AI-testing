@@ -1,0 +1,20 @@
+{
+    "schema_version": "v1",
+    "name_for_human": "Sentence Reverser",
+    "name_for_model": "Sentence_Reverser",
+    "description_for_human": "This AI takes a sentence as input and returns the sentence reversed. Perfect for generating reversed text for various applications.",
+    "description_for_model": "This API reverses the input sentence, processing both Chinese characters and English letters to produce the reversed version of the entire input string.",
+    "auth": {
+        "type": "service_http"
+    },
+    "api": {
+        "type": "openapi",
+        "url": "Replace with the actual URL of the OpenAPI spec"
+    },
+    "logo_url": "Replace with the actual URL of the logo image", 
+    "contact_email": "steven.ready.2021@gmail.com",
+    "legal_info_url": "http://www.example.com/legal",
+    "examples": {
+        "url": "Replace with the actual URL of the example file"
+    }
+}
